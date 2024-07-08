@@ -1,0 +1,301 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #ad7751;
+}
+
+header {
+  position: fixed;
+  background-color: #ad7751;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1px;
+  padding: 20px;
+}
+
+header .navbar {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 3rem;
+  transition: 0.2s ease;
+}
+
+.navbar a:hover {
+  color: chocolate;
+}
+
+.navbar a strong {
+  color: chocolate;
+}
+
+.navbar .menu-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+}
+
+.navbar .menu-links li a {
+  color: #fff;
+  font-weight: 200;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.navbar .menu-links li a:hover {
+  color: chocolate;
+}
+
+/* CardList Styling */
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1250px;
+  margin: 100px auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+.card-list h1 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+.card-list .card-item {
+  background: #e79e6b;
+  padding: 26px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px #000400;
+  list-style: none;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: border 0.5s ease;
+}
+
+.card-list .card-item:hover {
+  border: 2px solid #000400;
+}
+
+.card-list .card-item img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 18px;
+  object-fit: cover;
+  transition: linear 0.5s;
+}
+
+.card-list .card-item img:hover {
+  transform: scale(1.1);
+}
+
+.card-list span {
+  display: inline-block;
+  background: #fff;
+  margin-top: 32px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  border-radius: 50px;
+  font-weight: 400;
+  color: #000;
+}
+
+.card-list h3 {
+  color: #000;
+  font-size: 1.2rem;
+  margin-top: 28px;
+  font-weight: 200;
+}
+
+.more-btn {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  padding-top: 50px;
+  position: relative;
+  right: 0;
+}
+
+.more-btn a {
+  padding: 18px 40px;
+  background: #fff;
+  border-radius: 30px;
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 200;
+  transition: 0.4s ease-in;
+  text-decoration: none;
+}
+
+.more-btn a:hover {
+  background: chocolate;
+  color: #fff;
+}
+
+/* CardList Responsiveness */
+@media (max-width: 1200px) {
+  .card-list .card-item {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .card-list {
+    margin: 0 auto;
+  }
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 900px) {
+  .navbar .menu-links {
+    max-width: 300px;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    left: -300px;
+    top: 0;
+    display: block;
+    padding: 75px 40px 0;
+    transition: left 0.2s ease;
+  }
+
+  .navbar .menu-links li {
+    margin-bottom: 30px;
+  }
+
+  .navbar .menu-links li {
+    color: #000;
+    font-size: 1.1rem;
+  }
+}
+
+/* Footer Styling */
+.footer {
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  max-width: 1280px;
+  width: 95%;
+  border-radius: 6px;
+  margin-left: 10%;
+}
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.footer .footer-col .links a {
+  color: #bfbfbf;
+  text-decoration: none;
+}
+
+.footer .footer-col .links a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489c6;
+  caret-color: #fff;
+  padding-left: 10px;
+  color: #fff;
+}
+
+.footer-col input ::placeholder {
+  color: #ccc;
+}
+
+.footer-col form button {
+  background-color: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2 ease;
+}
+
+.footer-col form button:hover {
+  background-color: #1dbf73;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin-left: 0%;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+
+  .footer-col form {
+    display: block;
+  }
+
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+}
